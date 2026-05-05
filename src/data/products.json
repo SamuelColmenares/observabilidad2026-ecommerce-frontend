@@ -1,0 +1,298 @@
+{
+  "response": [
+    {
+      "id": "a1f3c9d2-1b4e-4f8a-9c2a-8d6e2b7f0011",
+      "name": "Laptop Lenovo ThinkPad X1",
+      "description": "Portátil empresarial con 16GB RAM y SSD de 512GB",
+      "price": 5500000
+    },
+    {
+      "id": "b2e4a7c1-9d3f-4a1b-bc55-92fa1c220012",
+      "name": "iPhone 13",
+      "description": "Smartphone Apple con 128GB de almacenamiento",
+      "price": 4200000
+    },
+    {
+      "id": "c3f9b1d4-7e2a-4e91-9e12-1d7fa9000013",
+      "name": "Audífonos Sony WH-1000XM5",
+      "description": "Audífonos inalámbricos con cancelación de ruido",
+      "price": 1800000
+    },
+    {
+      "id": "d4a7e2b9-1234-4d9c-8a77-2b6c1d880014",
+      "name": "Smart TV Samsung 55 pulgadas",
+      "description": "Televisor 4K UHD con sistema Tizen",
+      "price": 2800000
+    },
+    {
+      "id": "e5b8c3d1-9f22-4e8c-a111-8cc9b1200015",
+      "name": "Mouse Logitech MX Master 3",
+      "description": "Mouse ergonómico inalámbrico",
+      "price": 350000
+    },
+    {
+      "id": "f6d9e1a7-7b2c-4b2a-b2c3-99d881000016",
+      "name": "Teclado mecánico Redragon",
+      "description": "Teclado RGB con switches azules",
+      "price": 250000
+    },
+    {
+      "id": "07a8c9e1-4d3b-4c91-8a44-7712000017aa",
+      "name": "Cámara Canon EOS M50",
+      "description": "Cámara mirrorless con lente 15-45mm",
+      "price": 3200000
+    },
+    {
+      "id": "18b9d2f3-5e6a-4b7c-8d99-22ab000018bb",
+      "name": "Tablet Samsung Galaxy Tab S8",
+      "description": "Tablet Android con pantalla de 11 pulgadas",
+      "price": 2900000
+    },
+    {
+      "id": "29c1e3f4-6a7b-4c8d-9e11-33bc000019cc",
+      "name": "Monitor LG 27 pulgadas",
+      "description": "Monitor IPS Full HD",
+      "price": 900000
+    },
+    {
+      "id": "30d2f4a5-7b8c-4d9e-af22-44cd000020dd",
+      "name": "Disco duro externo 1TB",
+      "description": "Almacenamiento portátil USB 3.0",
+      "price": 280000
+    },
+    {
+      "id": "41e3a5b6-8c9d-4eaf-b333-55de000021ee",
+      "name": "Silla gamer",
+      "description": "Silla ergonómica con soporte lumbar",
+      "price": 750000
+    },
+    {
+      "id": "52f4b6c7-9dab-4fb0-c444-66ef000022ff",
+      "name": "Impresora HP DeskJet",
+      "description": "Impresora multifuncional WiFi",
+      "price": 450000
+    },
+    {
+      "id": "63a5c7d8-abcd-4c11-d555-77fa00002311",
+      "name": "Router TP-Link",
+      "description": "Router inalámbrico doble banda",
+      "price": 300000
+    },
+    {
+      "id": "74b6d8e9-bcde-4d22-e666-88ab00002422",
+      "name": "Cafetera Oster",
+      "description": "Cafetera eléctrica de 12 tazas",
+      "price": 220000
+    },
+    {
+      "id": "85c7e9f0-cdef-4e33-f777-99bc00002533",
+      "name": "Licuadora Ninja",
+      "description": "Licuadora de alta potencia",
+      "price": 400000
+    },
+    {
+      "id": "96d8f0a1-def0-4f44-a888-aacd00002644",
+      "name": "Horno microondas LG",
+      "description": "Microondas de 20 litros",
+      "price": 380000
+    },
+    {
+      "id": "a7e9a1b2-ef01-4a55-b999-bbde00002755",
+      "name": "Refrigerador Samsung",
+      "description": "Nevera de dos puertas",
+      "price": 3500000
+    },
+    {
+      "id": "b8f0b2c3-f012-4b66-caaa-ccfe00002866",
+      "name": "Aspiradora Dyson",
+      "description": "Aspiradora inalámbrica",
+      "price": 2600000
+    },
+    {
+      "id": "c9a1c3d4-0123-4c77-dbbb-dd0f00002977",
+      "name": "Reloj inteligente Xiaomi",
+      "description": "Smartwatch con monitor de ritmo cardíaco",
+      "price": 350000
+    },
+    {
+      "id": "dab2d4e5-1234-4d88-eccc-ee1a00003088",
+      "name": "Bicicleta de montaña",
+      "description": "Bicicleta con suspensión delantera",
+      "price": 1200000
+    },
+    {
+      "id": "ebc3e5f6-2345-4e99-fddd-ff2b00003199",
+      "name": "Patineta eléctrica",
+      "description": "Scooter eléctrico con autonomía de 20 km",
+      "price": 1800000
+    },
+    {
+      "id": "fcd4f6a7-3456-4faa-aeee-003c000032aa",
+      "name": "Zapatos deportivos Nike",
+      "description": "Tenis para correr",
+      "price": 450000
+    },
+    {
+      "id": "0de5a7b8-4567-4bbb-bfff-114d000033bb",
+      "name": "Chaqueta impermeable",
+      "description": "Chaqueta resistente al agua",
+      "price": 300000
+    },
+    {
+      "id": "1ef6b8c9-5678-4ccc-c111-225e000034cc",
+      "name": "Mochila escolar",
+      "description": "Mochila con compartimento para laptop",
+      "price": 120000
+    },
+    {
+      "id": "2fa7c9d0-6789-4ddd-d222-336f000035dd",
+      "name": "Libro de programación",
+      "description": "Guía completa de Python",
+      "price": 90000
+    },
+    {
+      "id": "3gb8d0e1-7890-4eee-e333-4470000036ee",
+      "name": "Sofá de sala",
+      "description": "Sofá de 3 puestos",
+      "price": 2200000
+    },
+    {
+      "id": "4hc9e1f2-8901-4fff-f444-5581000037ff",
+      "name": "Mesa de comedor",
+      "description": "Mesa de madera para 6 personas",
+      "price": 1500000
+    },
+    {
+      "id": "5id0f2a3-9012-4aaa-a555-669200003811",
+      "name": "Cama doble",
+      "description": "Base cama con colchón",
+      "price": 1800000
+    },
+    {
+      "id": "6je1a3b4-0123-4bbb-b666-77a300003922",
+      "name": "Colchón ortopédico",
+      "description": "Colchón de espuma de alta densidad",
+      "price": 950000
+    },
+    {
+      "id": "7kf2b4c5-1234-4ccc-c777-88b400004033",
+      "name": "Ventilador de piso",
+      "description": "Ventilador de 3 velocidades",
+      "price": 150000
+    },
+    {
+      "id": "8lg3c5d6-2345-4ddd-d888-99c500004144",
+      "name": "Aire acondicionado portátil",
+      "description": "Equipo portátil de enfriamiento",
+      "price": 2000000
+    },
+    {
+      "id": "9mh4d6e7-3456-4eee-e999-aad600004255",
+      "name": "Plancha a vapor",
+      "description": "Plancha eléctrica con vapor",
+      "price": 130000
+    },
+    {
+      "id": "0ni5e7f8-4567-4fff-f000-bbe700004366",
+      "name": "Secador de cabello",
+      "description": "Secador profesional",
+      "price": 90000
+    },
+    {
+      "id": "1oj6f8a9-5678-4aaa-a111-ccf800004477",
+      "name": "Kit de maquillaje",
+      "description": "Set completo de cosméticos",
+      "price": 200000
+    },
+    {
+      "id": "2pk7a9b0-6789-4bbb-b222-dd0900004588",
+      "name": "Perfume Calvin Klein",
+      "description": "Fragancia unisex",
+      "price": 320000
+    },
+    {
+      "id": "3ql8b0c1-7890-4ccc-c333-ee1a00004699",
+      "name": "Gafas de sol Ray-Ban",
+      "description": "Lentes con protección UV",
+      "price": 500000
+    },
+    {
+      "id": "4rm9c1d2-8901-4ddd-d444-ff2b000047aa",
+      "name": "Reloj Casio",
+      "description": "Reloj digital resistente al agua",
+      "price": 150000
+    },
+    {
+      "id": "5sn0d2e3-9012-4eee-e555-003c000048bb",
+      "name": "Juego de ollas",
+      "description": "Set de cocina antiadherente",
+      "price": 400000
+    },
+    {
+      "id": "6to1e3f4-0123-4fff-f666-114d000049cc",
+      "name": "Sartén Tefal",
+      "description": "Sartén antiadherente",
+      "price": 120000
+    },
+    {
+      "id": "7up2f4a5-1234-4aaa-a777-225e000050dd",
+      "name": "Botella térmica",
+      "description": "Botella de acero inoxidable",
+      "price": 80000
+    },
+    {
+      "id": "8vq3a5b6-2345-4bbb-b888-336f000051ee",
+      "name": "Maleta de viaje",
+      "description": "Maleta rígida con ruedas",
+      "price": 350000
+    },
+    {
+      "id": "9wr4b6c7-3456-4ccc-c999-4470000052ff",
+      "name": "Cámara de seguridad",
+      "description": "Cámara IP con visión nocturna",
+      "price": 250000
+    },
+    {
+      "id": "0xs5c7d8-4567-4ddd-d000-558100005311",
+      "name": "Bombillo inteligente",
+      "description": "Bombillo LED controlado por app",
+      "price": 60000
+    },
+    {
+      "id": "1yt6d8e9-5678-4eee-e111-669200005422",
+      "name": "Consola PlayStation 5",
+      "description": "Consola de videojuegos Sony",
+      "price": 3200000
+    },
+    {
+      "id": "2zu7e9f0-6789-4fff-f222-77a300005533",
+      "name": "Control Xbox",
+      "description": "Control inalámbrico",
+      "price": 300000
+    },
+    {
+      "id": "3av8f0a1-7890-4aaa-a333-88b400005644",
+      "name": "Juego FIFA 24",
+      "description": "Videojuego de fútbol",
+      "price": 280000
+    },
+    {
+      "id": "4bw9a1b2-8901-4bbb-b444-99c500005755",
+      "name": "Parlante JBL",
+      "description": "Altavoz portátil Bluetooth",
+      "price": 450000
+    },
+    {
+      "id": "5cx0b2c3-9012-4ccc-c555-aad600005866",
+      "name": "Power bank 20000mAh",
+      "description": "Batería portátil",
+      "price": 120000
+    },
+    {
+      "id": "6dy1c3d4-0123-4ddd-d666-bbe700005977",
+      "name": "Cargador inalámbrico",
+      "description": "Base de carga rápida",
+      "price": 90000
+    }
+  ]
+}
