@@ -94,6 +94,19 @@ export const App: React.FC = () => {
             </span>
           </div>
         )}
+        {products.length === 0 && isSearchDirty && !loading && (
+          <div className={styles["no-results-container"]}>
+            <img
+              src="/assets/detective.svg"
+              alt="Detective"
+              width="128px"
+              height="128px"
+            />
+            <span className={styles["no-results-message"]}>
+              Nada por aquí… ¡pero seguimos buscando contigo!
+            </span>
+          </div>
+        )}
         {loading && (
           <div className={styles["loader-container"]}>
             <span className={styles["loader"]}></span>
@@ -104,7 +117,7 @@ export const App: React.FC = () => {
         )}
       </main>
       <footer className={styles.footer}>
-        <strong>Observabilidad 2026</strong> - Tech Talk - Frontend - Ecommerce
+        <strong>Observabilidad 2026</strong> - Tech Talk
       </footer>
     </div>
   );
