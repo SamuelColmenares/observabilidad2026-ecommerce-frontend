@@ -293,6 +293,54 @@
       "name": "Cargador inalámbrico",
       "description": "Base de carga rápida",
       "price": 90000
-    }
+    },
+    {
+    "id": "0de5a7b8-4567-4bbb-bfff-114d000033bb",
+    "name": "Chaqueta impermeable",
+    "description": "Chaqueta impermeable de alta resistencia diseñada para ofrecer protección total contra la lluvia, el viento y condiciones climáticas adversas. Fabricada con materiales técnicos de última generación, cuenta con una capa exterior repelente al agua y costuras selladas que evitan filtraciones. Incluye capucha ajustable, cremalleras resistentes al agua, bolsillos internos y externos con cierre de seguridad, y forro interior transpirable que regula la temperatura corporal. Ideal para actividades al aire libre como senderismo, ciclismo, viajes o uso diario en ciudades con clima variable. Disponible en varios colores y tallas, con diseño moderno y ergonómico que proporciona comodidad y libertad de movimiento.",
+    "price": 300000
+  },
+  {
+    "id": "a12bc34d-9876-4fgh-ijkl-556677889900",
+    "name": "Auriculares inalámbricos Bluetooth",
+    "description": "Auriculares inalámbricos de última tecnología con conectividad Bluetooth 5.3 que garantizan una conexión estable, rápida y de bajo consumo energético. Equipados con cancelación activa de ruido (ANC), permiten disfrutar de una experiencia de audio inmersiva sin interrupciones del entorno. Incorporan micrófono de alta definición para llamadas claras, batería de larga duración de hasta 30 horas con estuche de carga, y diseño ergonómico que se adapta cómodamente al oído. Compatibles con múltiples dispositivos como smartphones, tablets y laptops. Ideales para música, llamadas, gaming y uso diario.",
+    "price": 180000
+  },
+  {
+    "id": "b98c76de-1234-4aaa-bbbb-998877665544",
+    "name": "Silla ergonómica de oficina",
+    "description": "Silla ergonómica diseñada para brindar máxima comodidad durante largas jornadas de trabajo. Cuenta con respaldo de malla transpirable que mejora la ventilación, soporte lumbar ajustable, reposabrazos regulables en altura y ángulo, y asiento acolchado de alta densidad que reduce la fatiga. Su sistema de inclinación permite adaptar la postura según las necesidades del usuario. Base metálica resistente con ruedas giratorias silenciosas y duraderas. Ideal para oficinas, home office y espacios de estudio. Mejora la postura y previene dolores de espalda.",
+    "price": 850000
+  },
+  {
+    "id": "c56789ab-2222-4ccc-dddd-112233445566",
+    "name": "Smartwatch multifuncional",
+    "description": "Reloj inteligente con pantalla táctil AMOLED de alta resolución que ofrece una experiencia visual nítida y brillante. Incluye múltiples funciones como monitoreo de frecuencia cardíaca, seguimiento del sueño, contador de pasos, medición de oxígeno en sangre y registro de actividades deportivas. Compatible con sistemas Android e iOS, permite recibir notificaciones de llamadas, mensajes y aplicaciones. Resistente al agua con certificación IP68, batería de larga duración y múltiples esferas personalizables. Ideal para usuarios activos que desean monitorear su salud y mantenerse conectados.",
+    "price": 250000
+  },
+  {
+    "id": "d4445556-7777-4eee-ffff-999900001111",
+    "name": "Cafetera eléctrica programable",
+    "description": "Cafetera eléctrica de alto rendimiento con capacidad para preparar hasta 12 tazas de café. Cuenta con sistema de programación automática que permite configurar la hora de preparación, manteniendo el café caliente por más tiempo gracias a su placa calefactora. Incluye filtro reutilizable, indicador de nivel de agua, sistema antigoteo y función de apagado automático para mayor seguridad. Diseño moderno en acero inoxidable que se adapta a cualquier cocina. Ideal para hogares y oficinas que buscan practicidad y sabor en cada taza.",
+    "price": 220000
+  },
+  {
+    "id": "e1112223-3333-4aaa-bbbb-777788889999",
+    "name": "Mochila antirrobo con puerto USB",
+    "description": "Mochila moderna diseñada para la seguridad y comodidad del usuario. Fabricada con materiales resistentes al agua y cortes ocultos, incorpora compartimentos con cierres invisibles que dificultan el acceso no autorizado. Incluye puerto USB externo para cargar dispositivos móviles mediante batería portátil interna (no incluida). Cuenta con múltiples compartimentos organizadores, espacio para laptop de hasta 15.6 pulgadas, correas acolchadas y panel trasero ergonómico que reduce la presión en la espalda. Ideal para estudiantes, viajeros y profesionales urbanos.",
+    "price": 160000
+  },
+  {
+    "id": "f9998887-6666-4ddd-cccc-555544443333",
+    "name": "Lámpara LED inteligente",
+    "description": "Lámpara LED inteligente con control remoto y compatibilidad con asistentes de voz. Permite ajustar la intensidad y el color de la luz entre millones de opciones RGB, creando ambientes personalizados para diferentes momentos. Programable mediante aplicación móvil, incluye funciones como temporizador, modos de iluminación y sincronización con música. Bajo consumo energético y larga vida útil. Ideal para decoración del hogar, oficinas o espacios de entretenimiento.",
+    "price": 120000
+  },
+  {
+    "id": "g1212121-3434-4abc-def0-121212121212",
+    "name": "Zapatillas deportivas de alto rendimiento",
+    "description": "Zapatillas deportivas diseñadas para brindar comodidad, soporte y durabilidad en actividades físicas intensas. Fabricadas con materiales ligeros y transpirables que mantienen los pies frescos y secos. Suela con tecnología de amortiguación avanzada que absorbe impactos y mejora el rendimiento en cada paso. Diseño ergonómico que se adapta a la forma del pie, proporcionando estabilidad y evitando lesiones. Ideales para running, entrenamiento en gimnasio o uso casual. Disponibles en múltiples colores y tallas.",
+    "price": 280000
+  }
   ]
 }

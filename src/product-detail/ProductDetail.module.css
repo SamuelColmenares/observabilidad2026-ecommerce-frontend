@@ -1,0 +1,71 @@
+
+.detail-container {
+    background-color: var(--color-neutral-50);
+    flex: 1 1;
+    display: grid;
+    grid-template-columns: 256px 1fr;
+    gap:16px;
+    padding: 16px;
+}
+
+.product-detail--centered {
+  max-width: 992px;
+}
+
+.detail__reference-container {
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+    gap:8px
+}
+
+.detail__reference {
+    width: 256px;
+    height: 256px;
+}
+
+.detail__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detail__info-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.detail__info-pills {
+    display: flex;
+    gap: 16px;
+}
+
+.gray-pill{
+  min-width: 80px;
+  background-color: var(--color-neutral-200);
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 8px;
+}
+
+.payment-pill{
+  min-width: 80px;
+  background-color: var(--color-accent-700);
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 8px;
+  color: var(--color-neutral-50);
+}
+
+.detail__buy {
+    background-color: var(--color-accent-600);
+    height: 48px;
+    padding: 8px;
+    border: none;
+    color: var(--color-neutral-50);
+    cursor: pointer;
+}

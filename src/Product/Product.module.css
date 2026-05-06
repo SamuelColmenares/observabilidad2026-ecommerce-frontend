@@ -35,6 +35,16 @@
   font-weight: 400;
 }
 
+.product__button-detail {
+  min-width: 100px;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-accent-500);
+  color: var(--color-neutral-50);
+  font-weight: 400;
+}
+
 .product__description {
   font-size: 0.7rem;
 }

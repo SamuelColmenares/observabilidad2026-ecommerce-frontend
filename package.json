@@ -14,9 +14,11 @@
     "@opentelemetry/sdk-logs": "^0.216.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-router": "^7.14.2",
     "vite": "^8.0.10"
   },
   "devDependencies": {
+    "@react-router/dev": "^7.14.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "prettier": "^3.8.3",
