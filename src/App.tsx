@@ -13,9 +13,11 @@ import {
   BatchLogRecordProcessor
 } from '@opentelemetry/sdk-logs'
 import { OTLPLogExporter } from '@opentelemetry/exporter-logs-otlp-http';
+import { resourceFromAttributes  } from '@opentelemetry/resources';
+import { ATTR_SERVICE_NAME, ATTR_SERVICE_VERSION } from '@opentelemetry/semantic-conventions';
 import {
   BatchSpanProcessor,
-  WebTracerProvider,
+  WebTracerProvider,    
 } from '@opentelemetry/sdk-trace-web';
 import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-http';
 const collectorOptions = {
@@ -24,11 +26,19 @@ const collectorOptions = {
   concurrencyLimit: 10, // an optional limit on pending requests
 };
 const logExporter = new OTLPLogExporter(collectorOptions);
+
+// Create resource with service name
+const resource = resourceFromAttributes({
+    [ATTR_SERVICE_NAME]: 'accenture-market-place-observability-2026',
+    [ATTR_SERVICE_VERSION] : '1.0.0',
+});
+
 const loggerProvider = new LoggerProvider({
+  resource: resource,
   processors: [new BatchLogRecordProcessor(logExporter)]
 });
 
-const logger = loggerProvider.getLogger('default');
+const logger = loggerProvider.getLogger('ecommerce-app');
 
 export const App: React.FC = () => {
   const [products, setProducts] = React.useState<Product[]>([]);
@@ -40,7 +50,7 @@ export const App: React.FC = () => {
     logger.emit({
       severityNumber: SeverityNumber.INFO,
       severityText: 'info',
-      body: 'this is a log body',
+      body: 'Aplicación ha sido iniciada',
       attributes: { 'log.type': 'custom' },
     });
   })
