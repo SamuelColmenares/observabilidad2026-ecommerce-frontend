@@ -8,6 +8,10 @@ yarn-debug.log*
 yarn-error.log*
 *.log
 logs/
+grafana/*
+loki/*
+otel/*
+docker-compose.yml
 
 # Build artifacts (adjust based on your build tool like tsc or webpack)
 dist/
