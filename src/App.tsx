@@ -1,44 +1,18 @@
 import React, { use, useEffect } from "react";
 import styles from "./App.module.css";
-import { ProductList } from "./product/ProductList";
 import { fetchProducts } from "./services/products-services";
 import type { Product } from "./product/Product";
 import { Link, Outlet } from "react-router";
 import { ProductsContext } from "./context/ProductsContext";
-import { SeverityNumber, logs } from '@opentelemetry/api-logs';
-import {
-  LoggerProvider,
-  SimpleLogRecordProcessor,
-  ConsoleLogRecordExporter,
-  BatchLogRecordProcessor
-} from '@opentelemetry/sdk-logs'
-import { OTLPLogExporter } from '@opentelemetry/exporter-logs-otlp-http';
-import { resourceFromAttributes  } from '@opentelemetry/resources';
-import { ATTR_SERVICE_NAME, ATTR_SERVICE_VERSION } from '@opentelemetry/semantic-conventions';
-import {
-  BatchSpanProcessor,
-  WebTracerProvider,    
-} from '@opentelemetry/sdk-trace-web';
-import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-http';
-const collectorOptions = {
-  url: 'http://172.26.190.162:3005/v1/logs', // url is optional and can be omitted - default is http://localhost:4318/v1/traces
+import { SeverityNumber, logs } from "@opentelemetry/api-logs";
+import { TelemetryAttributes } from "./telemetry/TelemetryAttributes";
+import { TelemetryManager } from "./telemetry/Telemetry";
+
+export const telemetryManager = new TelemetryManager({
+  url: "http://172.26.190.162:3005/v1/logs", // url is optional and can be omitted - default is http://localhost:4318/v1/traces
   headers: {}, // an optional object containing custom headers to be sent with each request
   concurrencyLimit: 10, // an optional limit on pending requests
-};
-const logExporter = new OTLPLogExporter(collectorOptions);
-
-// Create resource with service name
-const resource = resourceFromAttributes({
-    [ATTR_SERVICE_NAME]: 'accenture-market-place-observability-2026',
-    [ATTR_SERVICE_VERSION] : '1.0.0',
 });
-
-const loggerProvider = new LoggerProvider({
-  resource: resource,
-  processors: [new BatchLogRecordProcessor(logExporter)]
-});
-
-const logger = loggerProvider.getLogger('ecommerce-app');
 
 export const App: React.FC = () => {
   const [products, setProducts] = React.useState<Product[]>([]);
@@ -47,14 +21,9 @@ export const App: React.FC = () => {
   const [isSearchDirty, setIsSearchDirty] = React.useState(false);
 
   useEffect(() => {
-    logger.emit({
-      severityNumber: SeverityNumber.INFO,
-      severityText: 'info',
-      body: 'Aplicación ha sido iniciada',
-      attributes: { 'log.type': 'custom' },
-    });
-  })
-
+    telemetryManager.logInfo(TelemetryAttributes.APP_INITIALIZED);
+  }, []);
+  
   const onSearchEvent = async () => {
     setIsSearchDirty(true);
     setLoading(true);
@@ -88,13 +57,13 @@ export const App: React.FC = () => {
               className={styles["row"] + " " + styles["row-vertical-centered"]}
             >
               <Link to={`/`}>
-                            <img
-                className={styles.icon}
-                src="/assets/logo.svg"
-                alt="Logo"
-                width="24px"
-                height="24px"
-              />
+                <img
+                  className={styles.icon}
+                  src="/assets/logo.svg"
+                  alt="Logo"
+                  width="24px"
+                  height="24px"
+                />
               </Link>
               <input
                 onChange={(e) => setSearch(e.target.value)}
