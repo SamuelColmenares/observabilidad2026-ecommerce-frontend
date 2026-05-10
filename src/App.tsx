@@ -23,7 +23,7 @@ export const App: React.FC = () => {
   useEffect(() => {
     telemetryManager.logInfo(TelemetryAttributes.APP_INITIALIZED);
   }, []);
-  
+
   const onSearchEvent = async () => {
     setIsSearchDirty(true);
     setLoading(true);
@@ -84,22 +84,30 @@ export const App: React.FC = () => {
               </button>
             </div>
             <div className={styles.menu}>
-              <button className={styles["search-button"]}>
-                <img
-                  src="/assets/bell.svg"
-                  alt="Notificaciones"
-                  width="24px"
-                  height="24px"
-                />
-              </button>
-              <button className={styles["search-button"]}>
-                <img
-                  src="/assets/cart-3.svg"
-                  alt="Carrito"
-                  width="24px"
-                  height="24px"
-                />
-              </button>
+              <div className={styles["search-button-container"]}>
+                <button className={styles["search-button"]}>
+                  <img
+                    src="/assets/bell.svg"
+                    alt="Notificaciones"
+                    width="24px"
+                    height="24px"
+                  />
+                </button>
+                <span className={styles["search-button-text"]}>
+                  Notificaciones
+                </span>
+              </div>
+              <div className={styles["search-button-container"]}>
+                <button className={styles["search-button"]}>
+                  <img
+                    src="/assets/cart-3.svg"
+                    alt="Carrito"
+                    width="24px"
+                    height="24px"
+                  />
+                </button>
+                <span className={styles["search-button-text"]}>Carrito</span>
+              </div>
             </div>
           </div>
         </header>

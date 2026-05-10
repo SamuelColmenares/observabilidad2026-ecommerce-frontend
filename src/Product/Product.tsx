@@ -24,16 +24,28 @@ export const Product: React.FC<Product> = ({
           alt={name}
         />
       </div>
-      <p className={styles["product__description"]}>{description}</p>
+      <p
+        className={
+          styles["product__description"] + " " + styles["product--limit"]
+        }
+      >
+        {description}
+      </p>
       <span className={styles["product__price"]}>${price.toFixed(2)}</span>
-      <button className={styles["product__button-add"]}>Agregar</button>
 
-      <Link to={`/product-detail/${id}`} key={id}>
-        <button className={styles["product__button-detail"]}>
-          {" "}
-          Ver detalles{" "}
-        </button>
-      </Link>
+      <div className={styles["product__actions"]}>
+        <button className={styles["product__button-add"]}>Agregar</button>
+        <Link
+          to={`/product-detail/${id}`}
+          key={id}
+          className={styles["product__button-detail-container"]}
+        >
+          <button className={styles["product__button-detail"]}>
+            {" "}
+            Ver detalles{" "}
+          </button>
+        </Link>
+      </div>
     </li>
   );
 };

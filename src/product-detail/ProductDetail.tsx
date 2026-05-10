@@ -16,7 +16,9 @@ export const ProductDetail: React.FC = () => {
   const product = products.find((product) => product.id === id);
 
   useEffect(() => {
-        telemetryManager.logInfo(TelemetryAttributes.PRODUCT_DETAIL_VIEWED);
+    telemetryManager.logInfo(
+      TelemetryAttributes.PRODUCT_DETAIL_VIEWED + " " + product?.name,
+    );
   }, []);
 
   return (
@@ -27,11 +29,11 @@ export const ProductDetail: React.FC = () => {
           src={`/assets/no-image.svg`}
           alt={product?.name}
         />
-        <button className={styles["detail__buy"]}>Comprar ahora</button>
+        <button className={styles["detail__buy"]}>Agregar al carrito</button>
       </div>
       <section className={styles["detail__info"]}>
         <h2>{product?.name}</h2>
-        <p>{product?.description}</p>
+        <p className={styles["detail--limit"]}>{product?.description}</p>
         <p className={styles["detail__info-price"]}>
           <span>COP</span>&nbsp;{product?.price?.toFixed(2)}
         </p>

@@ -68,3 +68,10 @@
   color: var(--color-neutral-50);
   cursor: pointer;
 }
+
+.detail--limit {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

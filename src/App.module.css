@@ -118,3 +118,14 @@ li {
   display: flex;
   gap: 16px;
 }
+
+.search-button-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.search-button-text {
+  color: var(--color-neutral-50);
+  font-size: 0.7rem;
+}
