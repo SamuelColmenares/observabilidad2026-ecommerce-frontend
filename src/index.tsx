@@ -6,6 +6,8 @@ import { ProductDetail } from "./product-detail/ProductDetail";
 import { Home } from "./home/Home";
 import { ShoppingCar } from "./shopping-car/shopping-car";
 import { TelemetryManager } from "./telemetry/Telemetry";
+import { GeneralErrorBoundary } from "./error-boundaries/GeneralErrorBoundary";
+import { Notifications } from "./notifications/Notifications";
 
 export const telemetryManager = new TelemetryManager({
   url: "http://172.26.190.162:3005/v1/logs", // url is optional and can be omitted - default is http://localhost:4318/v1/traces
@@ -14,13 +16,16 @@ export const telemetryManager = new TelemetryManager({
 });
 
 createRoot(document.getElementById("container") as HTMLElement).render(
+  <GeneralErrorBoundary>
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
         <Route path="shopping-car" element={<ShoppingCar />} />
         <Route path="product-detail/:id" element={<ProductDetail />} />
+        <Route path="notifications" element={<Notifications />} />
       </Route>
     </Routes>
-  </BrowserRouter>,
+  </BrowserRouter>
+  </GeneralErrorBoundary>
 );

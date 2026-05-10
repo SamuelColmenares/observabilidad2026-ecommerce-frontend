@@ -9,7 +9,10 @@ import {
   ATTR_SERVICE_NAME,
   ATTR_SERVICE_VERSION,
 } from "@opentelemetry/semantic-conventions";
+const opentelemetry = require('@opentelemetry/api');
 import { TelemetryAttributes } from "./TelemetryAttributes";
+import { MeterProvider, PeriodicExportingMetricReader } from '@opentelemetry/sdk-metrics';
+import { OTLPMetricExporter } from '@opentelemetry/exporter-metrics-otlp-http';
 
 interface TelemetrySettings {
   url: string;
@@ -40,6 +43,15 @@ export class TelemetryManager {
     this.logger.emit({
       severityNumber: SeverityNumber.INFO,
       severityText: "info",
+      body: message,
+      attributes: { "log.type": "custom", ...attributes },
+    });
+  }
+
+   logError(message: string, attributes?: Record<string, unknown>) {
+    this.logger.emit({
+      severityNumber: SeverityNumber.ERROR,
+      severityText: "error",
       body: message,
       attributes: { "log.type": "custom", ...attributes },
     });

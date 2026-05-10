@@ -92,6 +92,10 @@ export const App: React.FC = () => {
               </div>
               <div className={styles.menu}>
                 <div className={styles["search-button-container"]}>
+                  <Link
+                    to={`/notifications`}
+                    className={styles["product__button-detail-container"]}
+                  >
                   <button className={styles["search-button"]}>
                     <img
                       src="/assets/bell.svg"
@@ -100,6 +104,7 @@ export const App: React.FC = () => {
                       height="24px"
                     />
                   </button>
+                  </Link>
                   <span className={styles["search-button-text"]}>
                     Notificaciones
                   </span>
