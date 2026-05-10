@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Home.module.css";
 import { ProductList } from "../product/ProductList";
 import { ProductsContext } from "../context/ProductsContext";
+import { telemetryManager } from "..";
+import { TelemetryAttributes } from "../telemetry/TelemetryAttributes";
 
 export const Home: React.FC = () => {
   const context = React.useContext(ProductsContext);
@@ -10,6 +12,12 @@ export const Home: React.FC = () => {
   }
 
   const { products, loading, isSearchDirty } = context;
+
+  useEffect(() => {
+    if (products?.length > 0) {
+      telemetryManager.logInfo(TelemetryAttributes.LIST_OF_PRODUCTS_VIEWED);
+    }
+  }, [products]);
 
   return (
     <>

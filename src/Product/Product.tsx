@@ -9,12 +9,12 @@ export interface Product {
   price: number;
 }
 
-export const Product: React.FC<Product> = ({
-  id,
-  name,
-  description,
-  price,
-}) => {
+export const Product: React.FC<{
+  product: Product;
+  onAddToCar: (id: string) => void;
+}> = ({ product, onAddToCar }) => {
+  const { id, name, description, price } = product;
+
   return (
     <li className={styles.product}>
       <div className={styles["product__reference-container"]}>
@@ -34,7 +34,12 @@ export const Product: React.FC<Product> = ({
       <span className={styles["product__price"]}>${price.toFixed(2)}</span>
 
       <div className={styles["product__actions"]}>
-        <button className={styles["product__button-add"]}>Agregar</button>
+        <button
+          className={styles["product__button-add"]}
+          onClick={() => onAddToCar(id)}
+        >
+          Agregar al carrito
+        </button>
         <Link
           to={`/product-detail/${id}`}
           key={id}

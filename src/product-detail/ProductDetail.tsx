@@ -1,19 +1,28 @@
 import React, { useEffect } from "react";
-import { ProductsContext } from "../context/ProductsContext";
+import {
+  ProductsContext,
+  ShoppingCarContext,
+} from "../context/ProductsContext";
 import styles from "./ProductDetail.module.css";
 import { useParams } from "react-router";
-import { telemetryManager } from "../App";
 import { TelemetryAttributes } from "../telemetry/TelemetryAttributes";
+
+import { telemetryManager } from "..";
 
 export const ProductDetail: React.FC = () => {
   const { id } = useParams();
   const context = React.useContext(ProductsContext);
+  const shoppingCarContext = React.useContext(ShoppingCarContext);
   if (context === undefined) {
     return undefined;
   }
 
   const { products } = context;
   const product = products.find((product) => product.id === id);
+
+  if (!product || !id) {
+    return undefined;
+  }
 
   useEffect(() => {
     telemetryManager.logInfo(
@@ -29,7 +38,29 @@ export const ProductDetail: React.FC = () => {
           src={`/assets/no-image.svg`}
           alt={product?.name}
         />
-        <button className={styles["detail__buy"]}>Agregar al carrito</button>
+        <button
+          className={styles["detail__buy"]}
+          onClick={() => {
+            shoppingCarContext?.setShoppingCar((prev) => {
+              let prod = products.find((product) => product.id === id);
+              let oldProd = prev.find((product) => product.product.id === id);
+              if (!prod) return prev;
+              if (!oldProd) {
+                let quan = prev?.find((p) => p.product.id == id)?.quantity ?? 0;
+                return [...prev, { product: prod, quantity: 1 }];
+              }
+
+              return prev.map((product) => {
+                return {
+                  ...product,
+                  quantity: product.quantity + 1,
+                };
+              });
+            });
+          }}
+        >
+          Agregar al carrito
+        </button>
       </div>
       <section className={styles["detail__info"]}>
         <h2>{product?.name}</h2>
