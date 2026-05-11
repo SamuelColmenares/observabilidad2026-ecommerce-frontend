@@ -13,7 +13,7 @@ receivers:
           max_age: 7200
           allowed_headers:
             - "content-type"
-        
+
 # Processors
 processors:
   batch:
@@ -24,7 +24,7 @@ exporters:
     endpoint: "http://loki:3100/otlp"
     tls:
       insecure: true
-      
+
 # Pipelines
 service:
   pipelines:

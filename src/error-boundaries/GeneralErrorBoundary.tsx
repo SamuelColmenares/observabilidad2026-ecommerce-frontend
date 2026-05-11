@@ -3,7 +3,10 @@ import { telemetryManager } from "..";
 import { TelemetryAttributes } from "../telemetry/TelemetryAttributes";
 import styles from "./GeneralErrorBoundary.module.css";
 
-export class GeneralErrorBoundary extends React.Component<any, { hasError: false }> {
+export class GeneralErrorBoundary extends React.Component<
+  any,
+  { hasError: false }
+> {
   constructor(props: any) {
     super(props);
     this.state = { hasError: false };
@@ -14,17 +17,25 @@ export class GeneralErrorBoundary extends React.Component<any, { hasError: false
     return { hasError: true };
   }
 
-  componentDidCatch(error:any, errorInfo: any) {
-      telemetryManager.logInfo(
-           TelemetryAttributes.GENERAL_ERROR + " " + error.toString() + " - " + errorInfo.componentStack
-      );
+  componentDidCatch(error: any, errorInfo: any) {
+    telemetryManager.logInfo(
+      TelemetryAttributes.GENERAL_ERROR +
+        " " +
+        error.toString() +
+        " - " +
+        errorInfo.componentStack,
+    );
   }
 
   render() {
     if (this.state.hasError) {
-      return <div className={styles["error-container"]} ><h1>Upps. Algo no sali como esperabamos...</h1></div>;
+      return (
+        <div className={styles["error-container"]}>
+          <h1>Upps. Algo no salió como esperabamos...</h1>
+        </div>
+      );
     }
 
-    return this.props.children; 
+    return this.props.children;
   }
 }

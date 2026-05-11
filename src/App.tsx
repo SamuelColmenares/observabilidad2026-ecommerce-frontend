@@ -96,14 +96,14 @@ export const App: React.FC = () => {
                     to={`/notifications`}
                     className={styles["product__button-detail-container"]}
                   >
-                  <button className={styles["search-button"]}>
-                    <img
-                      src="/assets/bell.svg"
-                      alt="Notificaciones"
-                      width="24px"
-                      height="24px"
-                    />
-                  </button>
+                    <button className={styles["search-button"]}>
+                      <img
+                        src="/assets/bell.svg"
+                        alt="Notificaciones"
+                        width="24px"
+                        height="24px"
+                      />
+                    </button>
                   </Link>
                   <span className={styles["search-button-text"]}>
                     Notificaciones

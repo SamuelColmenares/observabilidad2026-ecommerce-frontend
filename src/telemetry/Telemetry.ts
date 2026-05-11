@@ -9,10 +9,13 @@ import {
   ATTR_SERVICE_NAME,
   ATTR_SERVICE_VERSION,
 } from "@opentelemetry/semantic-conventions";
-const opentelemetry = require('@opentelemetry/api');
+const opentelemetry = require("@opentelemetry/api");
 import { TelemetryAttributes } from "./TelemetryAttributes";
-import { MeterProvider, PeriodicExportingMetricReader } from '@opentelemetry/sdk-metrics';
-import { OTLPMetricExporter } from '@opentelemetry/exporter-metrics-otlp-http';
+import {
+  MeterProvider,
+  PeriodicExportingMetricReader,
+} from "@opentelemetry/sdk-metrics";
+import { OTLPMetricExporter } from "@opentelemetry/exporter-metrics-otlp-http";
 
 interface TelemetrySettings {
   url: string;
@@ -48,7 +51,7 @@ export class TelemetryManager {
     });
   }
 
-   logError(message: string, attributes?: Record<string, unknown>) {
+  logError(message: string, attributes?: Record<string, unknown>) {
     this.logger.emit({
       severityNumber: SeverityNumber.ERROR,
       severityText: "error",
@@ -58,4 +61,24 @@ export class TelemetryManager {
   }
 }
 
-// TelemetryAttributes.APP_INITIALIZED,
+export class MetricsManager {
+  metricExporter: OTLPMetricExporter;
+  meter: ReturnType<MeterProvider["getMeter"]>;
+
+  constructor(settings: TelemetrySettings) {
+    this.metricExporter = new OTLPMetricExporter(settings);
+    const meterProvider = new MeterProvider({
+      readers: [
+        new PeriodicExportingMetricReader({
+          exporter: this.metricExporter,
+          exportIntervalMillis: 1000,
+        }),
+      ],
+    });
+    this.meter = meterProvider.getMeter("ecommerce-app-metter");
+  }
+
+  createCounter(name: string, description?: string) {
+    return this.meter.createCounter(name);
+  }
+}

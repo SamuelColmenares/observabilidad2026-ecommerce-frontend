@@ -4,5 +4,5 @@ export enum TelemetryAttributes {
   "SHOPPING_CART_VIEWED" = "Se inicio correctamente el carrito de compras.",
   "LIST_OF_PRODUCTS_VIEWED" = "Listado de productos mostrado correctamente.",
   "USER_SEARCHED_PRODUCTS_VIEWED" = "Se realizó una búsqueda de productos por el termino: ",
-  "GENERAL_ERROR" = "Algo ha salido mal...."
+  "GENERAL_ERROR" = "Algo ha salido mal....",
 }

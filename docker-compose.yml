@@ -27,7 +27,17 @@ services:
     volumes:
       - ./loki/loki-config.yaml:/etc/loki/local-config.yaml
     command: -config.file=/etc/loki/local-config.yaml
-
+  #  prometheus:
+  #    image: prom/prometheus
+  #    ports:
+  #     - "9090:9090"
+  #    volumes:
+  #      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml # Maps local config to container
+  #      - prometheus_data:/prometheus # Persistent storage for metrics
+  #    command:
+  #      - '--config.file=/etc/prometheus/prometheus.yml'
+  #      - '--storage.tsdb.path=/prometheus'
+  #    restart: unless-stopped
   grafana:
     image: grafana/grafana:11.6.0
     environment:
@@ -55,3 +65,6 @@ services:
           editable: false
         EOF
         /run.sh
+
+#volumes:
+#  prometheus_data

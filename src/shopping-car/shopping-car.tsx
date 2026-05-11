@@ -3,7 +3,7 @@ import styles from "./shopping-car.module.css";
 import type { Product } from "../product/Product";
 import { ShoppingCarContext } from "../context/ProductsContext";
 import { TelemetryAttributes } from "../telemetry/TelemetryAttributes";
-import { telemetryManager } from "..";
+import { shoppingCarVisitsMetric, telemetryManager } from "..";
 
 export interface ShoppingCar {
   product: Product;
@@ -12,6 +12,10 @@ export interface ShoppingCar {
 
 export const ShoppingCar: React.FC = () => {
   const shoppingCar = React.useContext(ShoppingCarContext);
+
+  useEffect(() => {
+    shoppingCarVisitsMetric.add(1);
+  }, []);
 
   if (shoppingCar === undefined || shoppingCar.shoppingCar.length === 0) {
     return (

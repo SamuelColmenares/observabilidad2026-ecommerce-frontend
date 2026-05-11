@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 15s # How often to fetch metrics
+
+scrape_configs:
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  # Example: Monitoring another container in the same network
+  # - job_name: 'my-app'
+  #   static_configs:
+  #     - targets: ['app-service-name:8080']
